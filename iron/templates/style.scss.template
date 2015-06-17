@@ -1,5 +1,5 @@
 /**
- *  Main css for {{component_name}}
+ *  Main css for {{component_name}} component
  */
 .mw-{{component_name}} {
 

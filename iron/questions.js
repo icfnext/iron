@@ -5,16 +5,14 @@ var fs    = require('fs'),
 function validateComponentName( data ) {
 
     var pwd = shell.pwd() + '/components/html/content/';
-    var dirs = fs.readdirSync(pwd).filter(function(file) {
-        return fs.statSync(path.join(pwd, file)).isDirectory();
+    var dirs = fs.readdirSync( pwd ).filter( function( file ) {
+        return fs.statSync( path.join( pwd, file ) ).isDirectory();
     });
 
     if ( dirs.indexOf(data) !== -1 ){
         return 'Name already in use, please enter a unique name';
-    } else {
-        return true;
-    }
-    
+
+    } else { return true; }
 }
 
 module.exports = [

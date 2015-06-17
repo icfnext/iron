@@ -1,0 +1,3 @@
+/**
+ *  Main js for foo
+ */
