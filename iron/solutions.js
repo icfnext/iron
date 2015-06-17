@@ -1,7 +1,7 @@
-var gulp        = require('gulp');
-var fs          = require('fs');
-var shell       = require('shelljs');
-var handlebars  = require('handlebars');
+var gulp        = require('gulp'),
+    fs          = require('fs'),
+    shell       = require('shelljs'),
+    handlebars  = require('handlebars');
 
 module.exports = function( data ){
 
@@ -29,13 +29,13 @@ module.exports = function( data ){
     function writeCSS( name, file ){
         shell.cd( pwd + 'css' );
         fs.writeFileSync( shell.pwd() + '/_' + name + '.scss' , cssFile );
-        console.log('~~>    CSS File Created');
+        console.log('~~> CSS File Created          ~~> ' + shell.pwd() + '/_' + name + '.scss');
     }
 
     function writeJS( name, file ){
         shell.cd( pwd + 'js' );
         fs.writeFileSync( shell.pwd() + '/' + name + '.js' , jsFile );
-        console.log('~~>    JS File Created');
+        console.log('~~> JS File Created           ~~> ' + shell.pwd() + '/' + name + '.js');
     }
 
     function writeHTML( name, file ){
@@ -44,16 +44,18 @@ module.exports = function( data ){
         shell.cd( name );
 
         fs.writeFileSync( shell.pwd() + '/' + name + '.html' , htmlFile );
-        console.log('~~>    Sightly HTML File Created');
+        console.log('~~> Sightly HTML File Created ~~> ' + shell.pwd() + '/' + name + '.html');
     }
 
     // Execute file creation
     createFiles( data, function( answers ){
-        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
         if ( answers.do_css ) writeCSS( answers.component_name );
         if ( answers.do_js ) writeJS( answers.component_name );
         writeHTML( answers.component_name );
-        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+        console.log('~~> Files Created for "' + answers.component_name + '" Component');
+        console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
     });
 
 }
