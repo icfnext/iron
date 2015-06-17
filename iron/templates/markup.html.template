@@ -1,0 +1,5 @@
+<sly data-sly-use.pattern="/path/to/patternLib">
+<div class="mw-{{component_name}}" data-sly-use.component="">
+
+</div>
+</sly>

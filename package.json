@@ -1,0 +1,31 @@
+{
+  "name": "Iron",
+  "version": "1.0.0",
+  "description": "An opinionated - yet flexible - front end development framework for use with Adobe Experience Manager",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jzeltman/iron.git"
+  },
+  "keywords": [
+    "aem",
+    "iron",
+    "frontend"
+  ],
+  "author": "Joshua Zeltman, Ben Westrate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jzeltman/iron/issues"
+  },
+  "homepage": "https://github.com/jzeltman/iron",
+  "dependencies": {
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-auto-task": "0.0.1",
+    "handlebars": "^3.0.3",
+    "inquirer": "^0.8.5",
+    "shelljs": "^0.5.1"
+  }
+}
