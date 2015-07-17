@@ -1,6 +1,6 @@
-var fs    = require('fs'),
-    path  = require('path'),
-    shell = require('shelljs');
+var fs    = require('fs');
+var path  = require('path');
+var shell = require('shelljs');
 
 function validateComponentName( data ) {
 

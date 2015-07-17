@@ -14,16 +14,16 @@ module.exports = function( data ){
         var htmlHB   = handlebars.compile( htmlBase );
             htmlFile = htmlHB( answers );
 
-        var cssBase = fs.readFileSync( __dirname + '/templates/style.scss.template' ).toString( ); 
+        var cssBase = fs.readFileSync( __dirname + '/templates/style.scss.template' ).toString( );
         var cssHB   = handlebars.compile( cssBase );
             cssFile = cssHB( answers );
 
-        var jsBase = fs.readFileSync( __dirname + '/templates/script.js.template' ).toString( ); 
+        var jsBase = fs.readFileSync( __dirname + '/templates/script.js.template' ).toString( );
         var jsHB   = handlebars.compile( jsBase );
             jsFile = jsHB( answers );
 
         if ( cb ) { cb( answers ); }
-        
+
     }
 
     function writeCSS( name, file ){
