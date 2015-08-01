@@ -1,0 +1,77 @@
+var gulp 			= require( 'gulp' );
+var browserify 		= require( 'browserify' );
+var iron			= require( 'iron' )
+
+
+
+function browserifyTask( ) {
+
+	var options = {
+		filePath : typeof arguments[0] === 'object' ? arguments[0] : false,
+		cb		 : typeof arguments[0] === 'function' ? arguments[0] : arguments[1]
+	}
+
+	console.log(iron.templates());
+
+	// var files = [];
+	// var bundles = [];
+	//
+	// console.log( "-------------------------------------------" )
+	// console.log( "	Browserify build step" )
+	//
+	// for ( let templateKey in templates.templates ) {
+	//
+	// 	let template = templates.templates[ templateKey ];
+	//
+	// 	let b = browserify( {
+	// 		debug: false,
+	// 		entries: path.resolve("./" + template.path + "/" + template.package.main),
+	// 	    // defining transforms here will avoid crashing your stream
+	// 	    transform: [ babelify, reactify ]
+	// 	} )
+	//
+	//
+	// 	bundles.push(
+	// 		b
+	// 		// Bundle template
+	// 		.bundle()
+	// 		.on('error', function (err) {
+	// 			console.log("BOOOOO!!")
+	// 			if( err.filename ){
+	// 				console.log( "	" + err.filename );
+	// 				console.log( util.inspect(err) );
+	// 			} else {
+	// 				console.log( util.inspect(err) );
+	// 			}
+	//
+	// 			cb("Bundle Error!");
+	// 		})
+	// 		//Pass desired output filename to vinyl-source-stream
+	// 		.pipe( source( "bundled." + template.package.main ) )
+	// 		// Start piping stream to tasks!
+	// 		.pipe( gulp.dest( "./" + template.path + "/build/js/"  ) )
+	// 	);
+	//
+	//
+	// 	b.on( 'bundle', function(){
+	//
+	// 		console.log( "		bundled: " + template.name );
+	//
+	// 	} )
+	// }
+	//
+	// var finalStream = through2.obj( function( chunk, enc, callback ){
+	//
+	// 	console.log( "-------------------------------------------" )
+	//
+	// 	callback();
+	// } );
+	//
+	// bundles.push(finalStream);
+	//
+	// return combiner( bundles );
+
+}
+
+
+module.exports = browserifyTask;

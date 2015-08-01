@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 var title   = require('./titleArt')();
-var main    = require('./../lib/index.js');
+var global  = require('./../lib/global.js');

@@ -1,0 +1,7 @@
+import gulp from 'gulp';
+
+// Task includes
+import browserify 			from './build-tasks/browserify';
+
+gulp.task( 'browserify', browserify );
+gulp.task( 'default' , [ 'browserify' ] );

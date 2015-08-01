@@ -1,0 +1,5 @@
+/**
+ *  Main css for {{template_name}}
+ */
+
+@import "{{template_name}}.components";
