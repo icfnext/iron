@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/jzeltman/iron",
   "dependencies": {
-    "fs": "0.0.2",
     "get-installed-path": "^1.0.2",
     "gulp": "^3.9.0",
     "gulp-auto-task": "0.0.1",

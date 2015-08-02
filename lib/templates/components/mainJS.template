@@ -1,0 +1,11 @@
+/**
+ *  This is the main file for {{component_name}}
+ */
+
+
+
+var {{component_name}} = function(){
+
+}
+
+module.exports = {{component_name}};
