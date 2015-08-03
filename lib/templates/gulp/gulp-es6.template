@@ -1,7 +1,28 @@
 import gulp from 'gulp';
+import iron from 'iron';
 
 // Task includes
 import browserify 			from './build-tasks/browserify';
+import watchBrowserify 		from './build-tasks/watch-browserify';
+
+import sass 			from './build-tasks/sass';
+import watchSass 		from './build-tasks/watch-sass';
+
+import moveToCq         from './build-tasks/move-to-cq';
 
 gulp.task( 'browserify', browserify );
+gulp.task( 'watchBrowserify', watchBrowserify );
+
+gulp.task( 'sass', sass );
+gulp.task( 'watchSass', watchSass );
+
+gulp.task( 'moveToCq', moveToCq );
+
+gulp.task( 'install' , function(){
+
+    iron.install();
+
+} )
+
+
 gulp.task( 'default' , [ 'browserify' ] );

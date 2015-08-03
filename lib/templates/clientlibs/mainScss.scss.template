@@ -1,5 +1,5 @@
 /**
- *  Main css for {{template_name}}
+ *  Main css for {{clientlib_name}}
  */
 
-@import "{{template_name}}.components";
+@import "{{clientlib_name}}.components";
