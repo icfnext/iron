@@ -1,0 +1,14 @@
+/**
+*
+* This file was generated. To edit the contents edit the
+* .ironrc file for your project.
+*
+*/
+
+module.exports = {
+{{#each components}}
+    {{#unless this.isGlobal }}
+    "{{ this.name }}" : require( './../../components/{{ this.name }}' ),
+    {{/unless}}
+{{/each}}
+}
