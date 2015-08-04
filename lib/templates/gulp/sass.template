@@ -1,6 +1,6 @@
 var gulp 			 = require( 'gulp' );
 var browserify 		 = require( 'browserify' );
-var iron			 = require( 'iron' );
+var iron			 = require( 'iron-fe' );
 var path			 = require( 'path' );
 var source           = require( 'vinyl-source-stream' );
 var rename           = require( 'gulp-rename' );
