@@ -1,6 +1,0 @@
-/**
- *  Main css for {{component_name}} component
- */
-.mw-{{component_name}} {
-
-}
