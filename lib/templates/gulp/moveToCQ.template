@@ -1,6 +1,6 @@
 
 var gulp = require( 'gulp' );
-var iron = require( 'iron' );
+var iron = require( 'iron-fe' );
 var es   = require( 'event-stream' );
 
 
