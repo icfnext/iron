@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import iron from 'iron';
+import iron from 'iron-fe';
 
 // Task includes
 import browserify 			from './build-tasks/browserify';
