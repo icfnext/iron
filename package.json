@@ -25,18 +25,18 @@
   },
   "homepage": "https://github.com/jzeltman/iron",
   "dependencies": {
-    "fs-extra": "^0.22.1",
+    "commander": "^2.9.0",
+    "fs-extra": "^0.30.0",
     "get-installed-path": "^1.0.2",
-    "gulp": "^3.9.0",
-    "gulp-auto-task": "0.0.1",
-    "handlebars": "^3.0.3",
-    "inquirer": "^0.8.5",
-    "npm": "^2.13.2",
+    "handlebars": "^4.0.5",
+    "inquirer": "^1.0.2",
+    "npm": "^3.9.0",
     "rc": "^1.0.3",
-    "recursive-readdir": "^1.2.1",
-    "shelljs": "^0.5.1",
+    "recursive-readdir": "^2.0.0",
+    "shelljs": "^0.7.0",
     "through2": "^2.0.0",
+    "underscore": "^1.8.3",
     "xml2js": "^0.4.9",
-    "yargs": "^3.15.0"
+    "yargs": "^4.7.1"
   }
 }
