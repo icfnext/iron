@@ -1,6 +1,6 @@
 {
   "name": "iron-fe",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "An opinionated - yet flexible - front end development framework for use with Adobe Experience Manager",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
