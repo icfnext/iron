@@ -1,0 +1,6 @@
+{
+    "name"                      : "GGP",
+    "aem_clientlibs_base_path"  : "ggp-ui/src/main/content/jcr_root/etc/clientlibs/ggp",
+    "default_components"        : [],
+    "iron_build_root"           : "ggp-ui-build"
+}

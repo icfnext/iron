@@ -30,6 +30,7 @@
     "get-installed-path": "^1.0.2",
     "handlebars": "^4.0.5",
     "inquirer": "^1.0.2",
+    "node-dir": "^0.1.12",
     "npm": "^3.9.0",
     "rc": "^1.0.3",
     "recursive-readdir": "^2.0.0",
