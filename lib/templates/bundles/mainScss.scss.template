@@ -1,5 +1,5 @@
 /**
- *  Main css for {{clientlib_name}}
+ *  Main css for {{bundle_name}}
  */
 
-@import "{{clientlib_name}}.components";
+@import "{{bundle_name}}.components";

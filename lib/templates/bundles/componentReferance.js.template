@@ -7,8 +7,6 @@
 
 module.exports = {
 {{#each components}}
-    {{#unless this.isGlobal }}
-    "{{ this.name }}" : require( './../../components/{{ this.name }}' ),
-    {{/unless}}
+    "{{ this }}" : require( './../../components/{{ this }}/{{ this }}.js' ),
 {{/each}}
 }

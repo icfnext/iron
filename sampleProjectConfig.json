@@ -1,6 +1,7 @@
 {
-    "name"                      : "GGP",
-    "aem_clientlibs_base_path"  : "ggp-ui/src/main/content/jcr_root/etc/clientlibs/ggp",
+    "name"                      : "project-name",
+    "clinetlib_root"            : "project-name/src/main/content/jcr_root/etc/clientlibs/project-name",
+    "clientlib_base_category"   : "projectName",
     "default_components"        : [],
     "iron_build_root"           : "ggp-ui-build"
 }
