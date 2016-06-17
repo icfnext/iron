@@ -1,7 +1,0 @@
-var gulp = require( 'gulp' );
-
-// Task includes
-var browserify = require( './build-tasks/browserify' );
-
-gulp.task( 'browserify', browserify );
-gulp.task( 'default' , [ 'browserify' ] );
