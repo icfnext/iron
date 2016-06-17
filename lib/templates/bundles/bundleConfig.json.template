@@ -1,0 +1,13 @@
+{
+	"clientLibPath": "{{clientLibPath}}",
+	"autoGenerate" : {
+		"js" 	 : true,
+		"styles" : true
+	},
+	"useGlobalComponents" : true,
+	"components" : [
+    {{#each components}}
+        "{{this}}",
+    {{/each}}
+    ]
+}

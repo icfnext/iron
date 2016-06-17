@@ -1,0 +1,5 @@
+/**
+ *  Main css for {{bundle_name}}
+ */
+
+@import "{{bundle_name}}.components";

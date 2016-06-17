@@ -1,8 +1,0 @@
-/**
- *  This is the main file for {{clientlib_name}}
- */
-
-var components          = require( './{{clientlib_name}}.components' );
-var globalComponent     = require( '../../components/global' );
-
-globalComponent.init( components );

@@ -1,0 +1,8 @@
+/**
+ *  This is the main file for {{bundle_name}}
+ */
+
+var components          = require( './{{bundle_name}}.components' );
+var globalComponent     = require( '../../components/global' );
+
+globalComponent.init( components );

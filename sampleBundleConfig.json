@@ -1,0 +1,11 @@
+{
+	"clientLibPath": "../project-name/src/main/content/jcr_root/etc/clientlibs/project-name/commons",
+	"autoGenerate" : {
+		"js" 	 : true,
+		"styles" : true
+	},
+	"useGlobalComponents" : true,
+	"components" : [
+
+	]
+}

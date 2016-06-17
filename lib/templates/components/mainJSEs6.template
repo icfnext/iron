@@ -1,0 +1,11 @@
+/**
+ *  This is the main file for {{component_name}}
+ */
+
+
+
+const {{component_name}} = () => {
+
+}
+
+export default {{component_name}};
