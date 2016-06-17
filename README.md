@@ -9,12 +9,17 @@ We want Iron to be a foundation for projects. Like all foundations it is a place
   - with a main.js, and a main.css files these small bits of code will help you stay orginized as your project grows.
 - Components are bundled via Browserify webpack or what ever else you fancy
 - Bundles are formed in client libraries.
-  - once the code is bundled it can be moved to a client library in AEM and then built via maven. 
+  - once the code is bundled it can be moved to a client library in AEM and then built via maven.
 
 ### To install Iron's Generator
 ```js
 npm install -g iron-fe
 ```
+
+### Use Iron with a new project
+```iron myProjectName```
+
+### Once you have initialized iron in your project you can use any of these commands
 
 ```bash
 Options:
@@ -26,3 +31,5 @@ Options:
     -b, --bundle [name]     Create a AEM bundle with specified name
     -l, --clinetlib [name]  Create a Clinet Library with specified name
 ```
+
+#### API -- Documentation Coming soon 
