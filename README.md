@@ -7,8 +7,8 @@ We want Iron to be a foundation for projects. Like all foundations it is a place
 - Iron encourages you to write your components in small sets of independent functionality
 - All components just blueprinted common js modules
   - with a main.js, and a main.css files these small bits of code will help you stay orginized as your project grows.
-- Components are bundled via Browserify webpack or what ever else you fancy
-- Bundles are formed in client libraries.
+- Components should be bundled via Browserify webpack or what ever else you fancy
+- Bundles should then be formed in client libraries.
   - once the code is bundled it can be moved to a client library in AEM and then built via maven.
 
 ### To install Iron's Generator
