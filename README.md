@@ -32,4 +32,16 @@ Options:
     -l, --clinetlib [name]  Create a Clinet Library with specified name
 ```
 
-#### API -- Documentation Coming soon 
+### API
+
+#### iron.bundles
+The functions nested under bundles are to help you construct the bundles you have created.
+
+##### bundles.match( filePath )
+Bundles.match takes a file path of a component and will return you a list of bundles that have that component explicitly stated as a dependency.
+
+```javascript
+import iron from 'iron-fe'; // var iron = require( 'iron-fe' );
+let myComponentPath = "the/path/to/my/component.js"
+iron.bundles.match( myComponentPath )
+```
