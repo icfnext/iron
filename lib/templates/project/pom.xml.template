@@ -37,8 +37,8 @@
 									<goal>install-node-and-npm</goal>
 								</goals>
 								<configuration>
-									<nodeVersion>v0.10.30</nodeVersion>
-									<npmVersion>1.4.9</npmVersion>
+									<nodeVersion>v6.3.0</nodeVersion>
+									<npmVersion>3.8.6</npmVersion>
 								</configuration>
 							</execution>
 							<execution>
@@ -58,7 +58,7 @@
 									</goals>
 									<configuration>
 										{{#each arguments}}
-											<arguments>{{arg}}</arguments>
+											<arguments>{{this}}</arguments>
 										{{/each}}
 									</configuration>
 								</execution>
