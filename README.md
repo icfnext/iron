@@ -6,7 +6,7 @@ We want Iron to be a foundation for projects. Like all foundations Iron(Fe) is a
 #### Where is Iron opinionated?
 - Iron encourages you to write your components in small sets of independent functionality.
 - All components are blueprinted common js modules.
--- with a main.js and a main.css files these small bits of code will help you stay organized as your project grows.
+  - with a main.js and a main.css files these small bits of code will help you stay organized as your project grows.
 - Components are bundled via Browserify webpack or whatever else you fancy.
 - Bundles are formed in client libraries.
   - once the code is bundled it can be moved to a client library in AEM and then built via maven.
