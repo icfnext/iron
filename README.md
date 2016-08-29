@@ -29,7 +29,7 @@ Options:
     -c, --component [name]  Create a component with specified name
     -6, --es6               Add -es6 after the component command to use es6 syntax in your components 
     -b, --bundle [name]     Create an AEM bundle with a specified name
-    -l, --clinetlib [name]  Create a Client Library with a specified name
+    -l, --clientlib [name]  Create a Client Library with a specified name
 ```
 
 ### API
