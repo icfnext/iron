@@ -1,6 +1,6 @@
 {
   "name": "iron-fe",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "An opinionated - yet flexible - front end development framework for use with Adobe Experience Manager",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,12 +18,12 @@
   "author": "Joshua Zeltman, Ben Westrate",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jzeltman/iron/issues"
+    "url": "https://github.com/Citytechinc/iron/issues"
   },
   "bin": {
     "iron": "bin/iron.js"
   },
-  "homepage": "https://github.com/jzeltman/iron",
+  "homepage": "https://github.com/Citytechinc/iron",
   "dependencies": {
     "chalk": "^1.1.3",
     "commander": "^2.9.0",
