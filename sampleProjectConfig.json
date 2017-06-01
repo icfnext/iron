@@ -1,7 +1,0 @@
-{
-    "name"                      : "project-name",
-    "clientlib_root"            : "project-name/src/main/content/jcr_root/etc/clientlibs/project-name",
-    "clientlib_base_category"   : "projectName",
-    "default_components"        : [],
-    "iron_build_root"           : "ggp-ui-build"
-}
