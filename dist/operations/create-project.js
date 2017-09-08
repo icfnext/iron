@@ -145,6 +145,8 @@ module.exports = function (program) {
 
                             var clientlibFullPath = subdirs[etcIndex].split('/');
                             config.clientlib_root = clientlibFullPath.splice(clientlibFullPath.indexOf(currentDir) + 1).join('/') + '/clientlibs';
+
+                            shell.mkdir(config.clientlib_root);
                         }
 
                         fs.writeFileSync('.ironrc', JSON.stringify(config, null, 4));

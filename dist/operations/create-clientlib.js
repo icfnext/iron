@@ -12,7 +12,6 @@ module.exports = function (program) {
 
     //make sure we are in the project iron build folder
     utils.pathToProjectRoot();
-
     shell.cd('..');
 
     var givenLibName = false;
@@ -28,16 +27,19 @@ module.exports = function (program) {
         clientlib_name: givenLibName ? givenLibName : program.clientlib
     };
 
-    libInfo.clientlib_category = ironRc.clientlib_base_category + '.' + libInfo.clientlib_name, libInfo.clientlib_path = './' + ironRc.clientlib_root + '/' + libInfo.clientlib_name;
+    shell.cd('..');
+    shell.cd(ironRc.clientlib_root);
 
-    shell.mkdir(libInfo.clientlib_path);
-    shell.mkdir(libInfo.clientlib_path + '/js');
-    shell.mkdir(libInfo.clientlib_path + '/css');
-    shell.cd(libInfo.clientlib_path);
+    libInfo.clientlib_category = ironRc.clientlib_base_category + '.' + libInfo.clientlib_name, libInfo.clientlib_path = ironRc.clientlib_root + '/' + libInfo.clientlib_name;
+
+    shell.mkdir(libInfo.clientlib_name);
+    shell.mkdir(libInfo.clientlib_name + '/js');
+    shell.mkdir(libInfo.clientlib_name + '/css');
+    shell.cd(libInfo.clientlib_name);
 
     var jsDotText = ironRc.templateConfigs.clientlibs.text.js;
     var cssDotText = ironRc.templateConfigs.clientlibs.text.css;
-    var contentXml = ironRc.templateConfigs.clientlibs.text.content;
+    var contentXml = ironRc.templateConfigs.clientlibs.content;
 
     utils.templateRenderer('css.txt', templates.clientlibs.txt[jsDotText].value, libInfo);
     utils.templateRenderer('js.txt', templates.clientlibs.txt[cssDotText].value, libInfo);
