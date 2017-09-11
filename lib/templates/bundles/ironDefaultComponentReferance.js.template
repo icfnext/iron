@@ -5,7 +5,7 @@
 *
 */
 
-module.exports = {
+export default = {
 {{#each components}}
     '{{ this }}' : require( './../../components/{{ this }}/{{ this }}.js' ),
 {{/each}}
