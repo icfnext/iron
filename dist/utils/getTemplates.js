@@ -37,22 +37,7 @@ function buildTemplatesObject() {
         editRc.addCustomTemplates(customTemplatesConfig);
     }
 
-    try {
-        ironPath = getInstalledPath.sync('iron-fe');
-        foundGlobalIron = true;
-    } catch (err) {
-        // ignore error
-        console.error(err);
-    }
-
-    if (!foundGlobalIron) {
-        try {
-            ironPath = getInstalledPath.sync('iron-fe', { local: true });
-        } catch (err) {
-            // ignore error
-            console.error(err);
-        }
-    }
+    var ironPath = require.resolve('iron-fe').split(path.sep).splice(0, require.resolve('iron-fe').split(path.sep).length - 2).join(path.sep);
 
     var templateTypesList = readDir(ironPath + "/lib/templates/");
     templates = makeTemplateObjects(templates, templateTypesList, ironPath + "/lib/templates/");
