@@ -7,6 +7,6 @@
 
 module.exports = {
 {{#each components}}
-    "{{ this }}" : require( './../../components/{{ this }}/{{ this }}.js' ),
+    '{{ this }}' : require( './../../components/{{ this }}/{{ this }}.js' ),
 {{/each}}
 }

@@ -29,9 +29,13 @@ module.exports = {
         return rcResult;
     },
 
-    update: function update(updatedRc) {
+    update: function update(updatedRc, runFromIronFolder) {
 
-        // shell.cd( pathToProjectRoot() );
+        console.log(pathToProjectRoot());
+
+        if (runFromIronFolder) {
+            shell.cd('..');
+        }
 
         if (updatedRc._) delete updatedRc._;
         if (updatedRc.s) delete updatedRc.s;

@@ -15,6 +15,16 @@ module.exports = {
         manageRC.update(config);
 
         console.log(chalk.bold.green("Project style_language is now set to : ") + newStyleLanguage.toUpperCase() + "\n");
+    },
+
+    addCustomTemplates: function addCustomTemplates(customTemplatesConfig) {
+        var config = require('rc')('iron');
+
+        config.templateConfigs = customTemplatesConfig;
+
+        manageRC.update(config, true);
+
+        console.log(chalk.bold.green("Iron RC has been updated to have custom templates in the config") + "\n");
     }
 
 };

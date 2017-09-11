@@ -9,6 +9,7 @@ var templates = require('../utils/getTemplates')();
 var templateRenderer = require('../utils/template-renderer');
 var clientLibs = require('../utils/getClientLibs');
 var pomBuilder = require('../utils/pom-builder');
+var customTemplatesConfig = require('./customTemplatesConfig');
 
 function buildCatArray(catArray) {
 
@@ -48,32 +49,7 @@ module.exports = function (program) {
         // default_components  : [],
         iron_build_root: program.args[0] + '-iron-fe',
         style_language: 'scss',
-        templateConfigs: {
-            customTemplates: true,
-            customTemplatesPath: "iron-templates",
-            bundles: {
-                componentReferance: {
-                    js: 'ironDefaultComponentReferance',
-                    scss: 'ironDefaultComponentReferance'
-                },
-                config: 'ironDefaultConfig',
-                entry: {
-                    js: 'ironDefaultMainEntry',
-                    scss: 'ironDefaultMainEntry'
-                }
-            },
-            clientlibs: {
-                content: 'ironDefaultContent',
-                text: {
-                    js: 'ironDefaultJs',
-                    css: 'ironDefaultCss'
-                }
-            },
-            components: {
-                js: 'ironDefault',
-                scss: 'ironDefault'
-            }
-        }
+        templateConfigs: customTemplatesConfig
     };
 
     config.clientlib_base_category = createClientLibBaseCat(config.name);

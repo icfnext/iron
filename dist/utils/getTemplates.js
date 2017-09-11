@@ -6,7 +6,10 @@ var path = require('path');
 var fs = require('fs');
 var shell = require('shelljs');
 var getInstalledPath = require('get-installed-path');
+
 var pathToProjectRoot = require('./pathToProjectRoot');
+var editRc = require('../operations/edit-ironrc.js');
+var customTemplatesConfig = require('../operations/customTemplatesConfig');
 
 var fixPath = function fixPath(pathString) {
     return path.resolve(path.normalize(pathString));
@@ -27,8 +30,29 @@ function buildTemplatesObject() {
 
     var templates = {};
     var ironRc = require('rc')('iron');
+    var ironPath = '';
+    var foundGlobalIron = false;
 
-    var ironPath = getInstalledPath.sync('iron-fe');
+    if (!ironRc.templateConfigs) {
+        editRc.addCustomTemplates(customTemplatesConfig);
+    }
+
+    try {
+        ironPath = getInstalledPath.sync('iron-fe');
+        foundGlobalIron = true;
+    } catch (err) {
+        // ignore error
+        console.error(err);
+    }
+
+    if (!foundGlobalIron) {
+        try {
+            ironPath = getInstalledPath.sync('iron-fe', { local: true });
+        } catch (err) {
+            // ignore error
+            console.error(err);
+        }
+    }
 
     var templateTypesList = readDir(ironPath + "/lib/templates/");
     templates = makeTemplateObjects(templates, templateTypesList, ironPath + "/lib/templates/");
